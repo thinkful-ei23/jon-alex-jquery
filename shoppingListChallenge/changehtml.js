@@ -35,8 +35,6 @@ $(renderItem);
 
 
 
-
-
 // ***Previous Version***
 
 // const generateItemHtml = function(item) {
