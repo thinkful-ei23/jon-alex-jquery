@@ -1,19 +1,30 @@
 'use strict';
 
-const createItem = function(item) {
+
+const generateItemHtml = function(item) {
   return `
-    <li>
-      ${item.name}
+      <li>
+      ${item}
+      <button class="check">
+        check
+      </button>
       <button class="delete">
-        <span>Delete</span>
+        delete
       </button>
     </li>
-  `;
+    `
+    ;
 };
 
 
-$(function() {
+function renderItem() {
+  $('.add-item-form').on('submit', function(event) {
+    event.preventDefault();
+    // use $(this) find jquery method event del<< and propagation
+    const myitem = generateItemHtml('broccoli');
+    console.log(myitem);
+    $('.shop-list').append(myitem);
+  } )
+}
 
-  $('#add-item').on('click', () => )
-
-})
+$(renderItem)
